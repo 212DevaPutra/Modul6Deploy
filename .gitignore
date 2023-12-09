@@ -1,0 +1,4 @@
+model/*
+!model/
+__pycache__
+Model.ipynb

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Predictions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #000000; /* Warna latar belakang sesuai dengan tema cyberpunk */
+            color: #17a2b8; /* Warna teks utama */
+        }
+
+        .contact-section {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 50px 0;
+            text-align: center;
+            width: 100%; /* Menyesuaikan lebar dengan layar */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .title-box {
+            margin-bottom: 30px;
+        }
+
+        .sec-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #17a2b8;
+        }
+
+        .login100-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wrap-input100 {
+            position: relative;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .input100 {
+            font-size: 16px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #17a2b8;
+            background: transparent;
+            color: #ffffff;
+        }
+
+        .input100:focus {
+            outline: none;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .symbol-input100 {
+            font-size: 16px;
+            color: #17a2b8;
+            position: absolute;
+            right: 0;
+            top: 12px;
+            transition: all 0.4s;
+        }
+
+        .container-login100-form-btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .login100-form-btn {
+            font-size: 18px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login100-form-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #image-preview {
+            width: 70%; /* Lebar gambar lebih besar */
+            margin: 20px 0;
+            border: 2px solid #17a2b8;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- form-section -->
+    <section class="contact-section" id="predict1">
+        <div class="container">
+            <div class="title-box">
+                <div class="sec-title">Upload an Image to Make a Cyberpunk Prediction</div>
+            </div>
+            <form class="login100-form validate-form" action="/predict" method="post" enctype="multipart/form-data">
+                <img id="image-preview" alt="image preview" src="#" />
+                <div class="container-login100-form-btn">
+                    <div class="wrap-input100 validate-input" data-validate="Image file is required" id="input">
+                        <input class="input100" id="image-source" name="file" onchange="previewImage();" type="file"
+                            alt="Input Image" accept="image/jpeg,image/jpg,image/png">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" type="submit">
+                        Execute
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function previewImage() {
+            var preview = document.getElementById('image-preview');
+            var fileInput = document.getElementById('image-source');
+            var file = fileInput.files[0];
+
+            if (file) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

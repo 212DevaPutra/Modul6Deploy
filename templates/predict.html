@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #000000; /* Warna latar belakang sesuai dengan tema cyberpunk */
+            color: #17a2b8; /* Warna teks utama */
+        }
+
+        .contact-section {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .title-box {
+            margin-bottom: 30px;
+        }
+
+        .sec-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #17a2b8;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .col-lg-8,
+        .col-lg-4 {
+            flex: 0 0 100%; /* Full width on smaller screens */
+            max-width: 100%;
+            margin-bottom: 20px; /* Added spacing between columns */
+        }
+
+        .inner-content {
+            padding: 30px;
+            border: 2px solid #17a2b8;
+            border-radius: 10px;
+            background-color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        .contact-form-area p,
+        .accuracy-label,
+        .prediction-info {
+            margin: 10px 0;
+            color: #000000; /* Warna teks diubah menjadi putih */
+        }
+
+        .contact-form-area p {
+            font-size: 25px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .accuracy-label {
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .prediction-info {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+            display: block;
+        }
+
+        #myProgress {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        #myBar {
+            width: 0%;
+            height: 30px;
+            background-color: #17a2b8;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Table-section -->
+    <section class="contact-section" id="result" style="padding-bottom: 50px;">
+        <div class="container">
+            <div class="title-box centred" style="padding-top: 5px; padding-bottom: 5px;">
+                <div class="sec-title">Cyberpunk Prediction Result</div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="inner-content image-container">
+                        <img src="{{ url_for('static', filename=img) }}" alt="" class="img-fluid">
+                        <p style="font-size: 25px; text-align: center;">Input Image</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="inner-content">
+                        <div class="contact-form-area prediction-info">
+                            <p>{{ model }} Model</p>
+                            <p class="accuracy-label">Predicted Label is: {{ labels[pred] }}</p>
+                            <p class="prediction-info">Accuracy: {{ (probs|max) }}%</p>
+                            <p class="prediction-info">Prediction Time: {{ (run_time) }} seconds</p>
+                            <input type="hidden" id="probability" value={{(probs|max)}}>
+                            <div id="myProgress">
+                                <div id="myBar">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function move() {
+            var elem = document.getElementById("myBar");
+            var width = 0;
+            var id = setInterval(frame, 10);
+
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    elem.style.width = width + "%";
+                    elem.innerHTML = width + "%";
+                }
+            }
+        }
+        move();
+    </script>
+
+</body>
+
+</html>
