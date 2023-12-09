@@ -17,13 +17,6 @@ Splitting Dataset : Training = 70%, Validation = 25%, Testing = 5%
 Model yang digunakan :
 - Resnet 152
 
-
-## Overview Dataset 
-***Link Dataset yang digunakan :*** [Acral melanoma and benign data set](https://figshare.com/s/a8c22c09f999f60a81bd).
-Gambar yang digunakan adalah Dermoscopic Images dengan total gambar 724 gambar. Terdiri dari 350 gambar Acral Melanoma dan 374 gambar benign nevi
-
-Splitting Dataset : Training = 70%, Validation = 20%, Testing = 10%
-
 ## Usage
 
 1. Lakukan Clone repository berikut:
