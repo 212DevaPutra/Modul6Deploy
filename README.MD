@@ -36,7 +36,7 @@ Splitting Dataset : Training = 70%, Validation = 20%, Testing = 10%
    ```
 3. Buat virtual evironment dengan perintah :
    ```bash
-conda create -n modul6 python=3.9
+   conda create -n modul6 python=3.9
    ```
 4. Aktivasi evironment dengan perintah :
    ```bash
