@@ -35,26 +35,26 @@ Splitting Dataset : Training = 70%, Validation = 20%, Testing = 10%
    cd Modul6Deploy
    ```
 3. Buat virtual evironment dengan perintah :
-```bash
+   ```bash
 conda create -n modul6 python=3.9
-```
+   ```
 4. Aktivasi evironment dengan perintah :
-```bash
-activate modul6
-```
+   ```bash
+   activate modul6
+   ```
 5. Install requirement file yang diperlukan :
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 6. Buat model dan latih model lalu simpan ke format `.h5`, dan salin ke `model/`.
 7. Jalankan dengan perintah :
-```bash
-python main.py
-```
+   ```bash
+   python main.py
+   ```
 8. Buka browser dan masukkan alamat :
-```bash
-127.0.0.1:2000
-```
+   ```bash
+   127.0.0.1:2000
+   ```
 9. Input gambar paper, rock atau scissors random dalam input form kemudian click execute.
 10. Hasil prediksi menampilkan nilai akurasi prediksi, label kelas, dan lama waktu prediksi.
 
