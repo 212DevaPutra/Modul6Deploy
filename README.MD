@@ -1,7 +1,10 @@
-# ✋✊✂️ Paper, Rock, and Scissors (RPS) Detection ✋✊✂️
+# ✋✊✂️ Paper, Rock, and Scissors Detection ✋✊✂️
+
+![Example](/static/example1.jpg)
+![Example2](/static/example2.jpg)
 
 ## Overview Project
-Project ini adalah tugas modul 6 yang ditujukan untuk deploy model machine laerning dengan task prediksi image RPS (rock, paper, scissors).
+Project ini adalah tugas Ujian Akhir Praktikum (UAP) yang ditujukan untuk deploy model machine laerning dengan task prediksi image RPS (rock, paper, scissors).
 
 ## Dataset 
 
