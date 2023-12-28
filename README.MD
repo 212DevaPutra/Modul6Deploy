@@ -11,7 +11,7 @@ Project ini adalah tugas Ujian Akhir Praktikum (UAP) yang ditujukan untuk deploy
 Project ini hanya menggunakan 1 buah dataset
 - Rock, Paper, and Scissors (RPS) Dataset
 
-Splitting Dataset : Training = 70%, Validation = 25%, Testing = 5%
+Splitting Dataset : Training = 80%, Validation = 10%, Testing = 10%
 
 **Preprocessing** menggunakan bawaan library resnet **preprocess_input** dari keras.
 
