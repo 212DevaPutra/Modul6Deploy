@@ -61,7 +61,7 @@ Predict 10 random picture :
    ```
 6. Buat model dan latih model lalu simpan ke format `.h5`, dan salin ke `model/`. Atau anda bisa mendownload model pada link dibawah!
    ```bash
-   https://drive.google.com/file/d/1-DIBGfhhqzpD6pQ8iLPwBFCRMk4K-zVc/view?usp=sharing
+   https://drive.google.com/file/d/1-DIBGfhhqzpD6pQ8iLPwBFCRMk4K-zVc/view?usp=drive_link
    ```
 7. Jalankan dengan perintah :
    ```bash
