@@ -21,15 +21,17 @@ Model yang digunakan :
 - Resnet 152
 
 Model summary :
+
 ![Example3](/static/example3.png)
 
 Accuracy and loss plot model :
 ![Example4](/static/example4.png)
 
-Confusion MAtrix :
+Confusion Matrix :
 ![Example5](/static/example5.png)
 
 Classification Report :
+
 ![Example6](/static/example6.png)
 
 Predict 10 random picture :
