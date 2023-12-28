@@ -63,7 +63,7 @@ Predict 10 random picture :
    ```
 7. Jalankan dengan perintah :
    ```bash
-   python main.py
+   python app.py
    ```
 8. Buka browser dan masukkan alamat :
    ```bash
