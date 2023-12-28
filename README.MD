@@ -18,7 +18,7 @@ Splitting Dataset : Training = 70%, Validation = 25%, Testing = 5%
 ## Model
 
 Model yang digunakan :
-- Resnet 152
+- VGG-19
 
 Model summary :
 
@@ -59,7 +59,10 @@ Predict 10 random picture :
    ```bash
    pip install -r requirements.txt
    ```
-6. Buat model dan latih model lalu simpan ke format `.h5`, dan salin ke `model/`.
+6. Buat model dan latih model lalu simpan ke format `.h5`, dan salin ke `model/`. Atau anda bisa mendownload model pada link dibawah!
+   ```bash
+   https://drive.google.com/file/d/1-DIBGfhhqzpD6pQ8iLPwBFCRMk4K-zVc/view?usp=sharing
+   ```
 7. Jalankan dengan perintah :
    ```bash
    python main.py
