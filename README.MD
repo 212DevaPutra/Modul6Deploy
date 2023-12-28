@@ -1,7 +1,7 @@
 # ✋✊✂️ Paper, Rock, and Scissors Detection ✋✊✂️
 
-![Example](/static/example1.jpg)
-![Example2](/static/example2.jpg)
+![Example](/static/example1.png)
+![Example2](/static/example2.png)
 
 ## Overview Project
 Project ini adalah tugas Ujian Akhir Praktikum (UAP) yang ditujukan untuk deploy model machine laerning dengan task prediksi image RPS (rock, paper, scissors).
@@ -19,6 +19,21 @@ Splitting Dataset : Training = 70%, Validation = 25%, Testing = 5%
 
 Model yang digunakan :
 - Resnet 152
+
+Model summary :
+![Example3](/static/example3.png)
+
+Accuracy and loss plot model :
+![Example4](/static/example4.png)
+
+Confusion MAtrix :
+![Example5](/static/example5.png)
+
+Classification Report :
+![Example6](/static/example6.png)
+
+Predict 10 random picture :
+![Example7](/static/example7.png)
 
 ## Usage
 
