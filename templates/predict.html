@@ -146,13 +146,13 @@
     </section>
 
     <script>
-        function move() {
+        function move(accuracy) {
             var elem = document.getElementById("myBar");
             var width = 0;
             var id = setInterval(frame, 10);
-
+    
             function frame() {
-                if (width >= 100) {
+                if (width >= accuracy) {
                     clearInterval(id);
                 } else {
                     width++;
@@ -161,7 +161,12 @@
                 }
             }
         }
-        move();
+    
+        // Get the accuracy value from the hidden input field
+        var accuracyValue = document.getElementById("probability").value;
+        
+        // Call move function with the accuracy value
+        move(accuracyValue);
     </script>
 
 </body>
