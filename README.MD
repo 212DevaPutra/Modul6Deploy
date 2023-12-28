@@ -13,8 +13,6 @@ Project ini hanya menggunakan 1 buah dataset
 
 Splitting Dataset : Training = 80%, Validation = 10%, Testing = 10%
 
-**Preprocessing** menggunakan bawaan library resnet **preprocess_input** dari keras.
-
 ## Model
 
 Model yang digunakan :
