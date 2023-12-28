@@ -11,16 +11,21 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #000000; /* Warna latar belakang sesuai dengan tema cyberpunk */
-            color: #17a2b8; /* Warna teks utama */
+            background-color: #000000;
+            color: #17a2b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
         .contact-section {
             background-color: #343a40;
             color: #ffffff;
-            padding: 50px 0;
+            padding: 50px;
             text-align: center;
-            width: 100%; /* Menyesuaikan lebar dengan layar */
+            width: 100%;
+            border-radius: 10px;
         }
 
         .container {
@@ -54,7 +59,7 @@
         .input100 {
             font-size: 16px;
             padding: 10px;
-            width: 100%;
+            width: calc(100% - 22px);
             border: none;
             border-bottom: 2px solid #17a2b8;
             background: transparent;
@@ -99,7 +104,7 @@
         }
 
         #image-preview {
-            width: 70%; /* Lebar gambar lebih besar */
+            width: 70%;
             margin: 20px 0;
             border: 2px solid #17a2b8;
             border-radius: 8px;
