@@ -12,10 +12,10 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'static/uploads/'
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 
-model_used = './model/resnet152model.h5'
+model_used = './model/model_vgg19.best.h5'
 
 def predict_result(model, run_time, probs, img):
-    class_list = {'rock': 0, 'paper': 1, 'scissors': 2}
+    class_list = {'paper': 0, 'rock': 1, 'scissors': 2}
     idx_pred = probs.index(max(probs))
     labels = list(class_list.keys())
     return render_template('/predict.html', labels=labels,
@@ -42,14 +42,14 @@ def predict():
     file = request.files["file"]
     file.save(os.path.join('static', 'temp.jpg'))
     img = cv2.cvtColor(np.array(Image.open(file)), cv2.COLOR_BGR2RGB)
-    img = np.expand_dims(cv2.resize(img, (150, 150)).astype('float32') / 255, axis=0)
+    img = np.expand_dims(cv2.resize(img, (224, 224)).astype('float32') / 255, axis=0)
     start = time.time()
     pred = model.predict(img)[0]
     labels = (pred > 0.5).astype(int)
     print(labels)
     runtimes = round(time.time()-start,4)
     respon_model = [round(elem * 100, 2) for elem in pred]
-    return predict_result("Resnet 152", runtimes, respon_model, 'temp.jpg')
+    return predict_result("VGG-19", runtimes, respon_model, 'temp.jpg')
 
 if __name__ == "__main__":
         app.run(debug=True, host='0.0.0.0', port=2000)
